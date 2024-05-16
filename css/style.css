@@ -45,7 +45,7 @@ body{
 }
 
 [class^="col-"]{ flex: 1 0 auto; padding: 0 1rem;}
-.col-1{ flex-basis: 8.33%; max-width: 8.33%;}                   
+.col-1{ flex-basis: 8.33%; max-width: 8.33%;}
 .col-2{ flex-basis: 16.66%; max-width: 16.66%;}
 .col-3{ flex-basis: 25%; max-width: 25%;}
 .col-4{ flex-basis: 33.33%; max-width: 33.33%;}
@@ -62,7 +62,6 @@ body{
 .align-center{ align-items: center;}
 
 /* custom css */
-
 header{ background: #000; color: #fff;}
 header h1{font-size: 30px}
 header h1 a{ color: inherit; display: inline-block; line-height: 80px;}
@@ -80,9 +79,32 @@ nav a{ display: block; line-height: 80px; color: inherit; padding: 0 15px;}
 .banner a{ color: var(--red);}
 
 
+.wrap-3{ background: var(--red); color: #fff; padding: 50px 0;}
+h2{ font-size: 72px; border-bottom: 10px solid; line-height: 60px; margin-bottom: 2rem;}
+.grid{ display: grid; grid-template-columns: repeat(2, 1fr); gap: 4rem 2rem; }
+.circle{ flex-shrink: 0; width: 100px; aspect-ratio: 1/1; border: 2px solid; border-radius: 50%; display: grid; place-items: center; font-size: 36px; margin-right: 2rem;}
+.wrap-3 h3{ font-size: 16px; line-height: 30px;}
+.wrap-3 p{  font: 100 14px/22px var(--ff);}
+
+
+.wrap-4{ background: #fff; color: var(--red); font-size: 36px; line-height: 10rem; text-align: center;}
+
+
+.wrap-5{ background: #ebebeb; color: #363636; padding: 100px 0 140px;}
+.wrap-5 .btn{ margin: 0 10px 4rem 0;}
+.btn.active{ background: var(--red); color: #fff; border-color: var(--red);}
+.work{ position: relative; margin-bottom: 2rem;}
+.work figcaption{ position: absolute; background: #fff; bottom: 0; left: 0; right: 0; text-align: center; padding: 20px 0; display: none; }
+.work h3{ color: var(--red); font-size: 18px; line-height: 40px;}
+.work p{ color: #898989; font: 100 14px/20px var(--ff) ;}
+.work img{ max-width: 100%; height: auto;}
+.work:hover figcaption{ display: block;}
+
+
 /* responsive s*/
 @media screen and (max-width:1220px){
-   html{ font-size: 13px; }
+   html{ font-size: 13px;}
+   h2{ font-size: 60px;}
 }
 @media screen and (max-width:980px){
     .col-t-1{ flex-basis: 8.33%; max-width: 8.33%;}
@@ -119,4 +141,5 @@ nav a{ display: block; line-height: 80px; color: inherit; padding: 0 15px;}
     .col-p-11{ flex-basis: 91.66%; max-width: 91.66%;}
     .col-p-12{ flex-basis: 100%; max-width: 100%;}
     .banner .flex{ flex-flow: column wrap;}
+    .grid{ grid-template-columns: repeat(1, 1fr); }
 }
