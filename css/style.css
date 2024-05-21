@@ -28,6 +28,8 @@ html{
     font-size: 15px;
     --red:#ca3c3c;
     --ff: proxima, sans-serif;
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
 }
 body{
     font: 16px/1.2 var(--ff);
@@ -62,7 +64,7 @@ body{
 .align-center{ align-items: center;}
 
 /* custom css */
-header{ background: #000; color: #fff;}
+header{ background: #000; color: #fff; position: sticky; top: 0; z-index: 1;}
 header h1{font-size: 30px}
 header h1 a{ color: inherit; display: inline-block; line-height: 80px;}
 nav{ margin-left: -20px;}
@@ -126,12 +128,59 @@ h2{ font-size: 72px; border-bottom: 10px solid; line-height: 60px; margin-bottom
 .gap p{ font-size: 14px; font-weight: 100; color: #363636; line-height: 22px; margin-top: 2rem;}
 
 
+
+.wrap-8{ background: #666; color: #fff; text-align: center; padding: 85px 0 50px;}
+.wrap-8 span{  font-size: 72px;}
+.wrap-8 p{ font-weight: 100; font-size: 72px; }
+.wrap-8 b{ font-size: 18px; margin-bottom: 25px; display: inline-block; }
+
+
+.wrap-9{ background: #fff; color: #363636; padding: 100px 0;}
+canvas{ margin-top: 50px; max-width: 100%; height: auto;}
+canvas:empty{ background: #ddd;}
+.accordion{ margin-top: 50px; }
+.accordion li{ margin-bottom: 10px;}
+.accordion a{ display: block; border: 1px solid #ebebeb; padding: 18px; color: #898989; border-radius: 10px;}
+.accordion span.fa{ margin-right: 20px;}
+.accordion p{ display: none; color: #363636; font-size: 14px; font-weight: 100; line-height: 22px; margin: 20px; }
+.accordion li:first-child p{ display: block;}
+.accordion a::after{ content: '+'; float: right;}
+.accordion a.active{ color: var(--red);}
+.accordion a.active::after{ content: '-';}
+
+
+.wrap-10{ background: var(--red);  padding: 23px 0 22px; }
+.wrap-10 input{ width: 370px; height: 35px; background: none; border: none; color: #fff; font: 100 36px/35px var(--ff); }
+.wrap-10 input::placeholder{ color: #fff;}
+.wrap-10 button{ background: #fff;}
+
+.wrap-11{ background: #7f7f7f; padding: 28px 0 0 0;}
+.box{ background: #a6a6a6; color: #fff; line-height: 95px; text-align: center; margin-bottom: 27px; }
+
+
+.wrap-12{ background: #ebebeb; color: #363636; padding: 100px 0;}
+.wrap-12 address{  color: #898989; line-height: 30px; font-weight: 100; font-style: normal; }
+.social2{ margin: 2rem 0; }
+.social2 a{ color: var(--red); margin-right: 20px;}
+.wrap-12 label{ display: block; border: 2px solid; padding: 17px; margin: 1rem 0;}
+.wrap-12 input{ border: none; background: none;}
+.wrap-12 textarea{ border: none; background: none; vertical-align: top; resize: none; height: 42px;}
+.wrap-12 button{ display: block; margin: 1rem 0; width: 100%; background: #fff; color: var(--red); border: none; height: 80px; border-radius: 10px;}
+.wrap-12 button span.fa{ font-size: 36px; vertical-align: middle;} 
+.wrap-12 :is(input,textarea):focus{ outline: none;}
+.wrap-12 label:focus-within{ border-color: var(--red);}
+
+
+.wrap-13{background: #252525; color: #fff;  text-align: center; padding: 50px 0;}
+
+
 /* responsive s*/
 @media screen and (max-width:1220px){
    html{ font-size: 13px;}
    h2{ font-size: 60px;}
 }
 @media screen and (max-width:980px){
+    .col-t-none{ display: none; }
     .col-t-1{ flex-basis: 8.33%; max-width: 8.33%;}
     .col-t-2{ flex-basis: 16.66%; max-width: 16.66%;}
     .col-t-3{ flex-basis: 25%; max-width: 25%;}
@@ -148,7 +197,8 @@ h2{ font-size: 72px; border-bottom: 10px solid; line-height: 60px; margin-bottom
     .gap{ margin-left: 50px;}
     .social{right: 0; left: auto; top: 0;}
     .social ul{flex-flow: column wrap;}
-    .social li{ margin: 0 0 10px 0; }
+    .social li{ margin: 0 0 10px 0;}
+    .col-t-auto{ flex-basis: 20%; max-width: 20%; }
 }
 @media screen and (max-width:767px){
     html{ font-size: 12px;}
@@ -172,5 +222,7 @@ h2{ font-size: 72px; border-bottom: 10px solid; line-height: 60px; margin-bottom
     .col-p-11{ flex-basis: 91.66%; max-width: 91.66%;}
     .col-p-12{ flex-basis: 100%; max-width: 100%;}
     .banner .flex{ flex-flow: column wrap;}
-    .grid{ grid-template-columns: repeat(1, 1fr); }
+    .grid{ grid-template-columns: repeat(1, 1fr);}
+    .wrap-10 input{ width: 240px; font-size: 24px;}
+    .col-p-auto{ flex-basis: 50%; max-width: 100%; }
 }
