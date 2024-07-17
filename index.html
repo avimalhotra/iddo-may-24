@@ -36,11 +36,16 @@
 </header>
 <div class="banner" role="banner">
     <div class="container">
-        <div class="flex align-center">
-            <div><button><span class="fa fa-play-circle-o"></span></button></div>
-            <div>
-                <p>Let me show you a few things</p>
-                <a href="">Click to play video</a>
+        <div class="video">
+            <video src="" controls width="1170" height="658"></video>
+            <div class="video-text">
+                <div class="flex align-center">
+                    <div><button><span class="fa fa-play-circle-o"></span></button></div>
+                    <div>
+                        <p>Let me show you a few things</p>
+                        <a href="">Click to play video</a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -116,66 +121,66 @@
         </div>  
         <div class="row">
             <div class="col-4 col-t-6 col-p-12">
-                <div class="work">
+                <div class="work web">
                     <figure>
                         <img src="img/work1.webp" alt="wrk 1" width="370" height="370" loading="lazy">
                         <figcaption>
-                            <h3>heading</h3>
+                            <h3>Heading 1</h3>
                             <p>designed by | Author</p>
                         </figcaption>
                     </figure>
                 </div>
             </div>
             <div class="col-4 col-t-6 col-p-12">
-                <div class="work">
+                <div class="work web">
                     <figure>
                         <img src="img/work1.webp" alt="wrk 1" width="370" height="370" loading="lazy">
                         <figcaption>
-                            <h3>heading</h3>
+                            <h3>Heading 2</h3>
                             <p>designed by | Author</p>
                         </figcaption>
                     </figure>
                 </div>
             </div>
             <div class="col-4 col-t-6 col-p-12">
-                <div class="work">
+                <div class="work web">
                     <figure>
                         <img src="img/work1.webp" alt="wrk 1" width="370" height="370" loading="lazy">
                         <figcaption>
-                            <h3>heading</h3>
+                            <h3>Heading 3</h3>
                             <p>designed by | Author</p>
                         </figcaption>
                     </figure>
                 </div>
             </div>
             <div class="col-4 col-t-6 col-p-12">
-                <div class="work">
+                <div class="work brand">
                     <figure>
                         <img src="img/work1.webp" alt="wrk 1" width="370" height="370" loading="lazy">
                         <figcaption>
-                            <h3>heading</h3>
+                            <h3>Heading 4</h3>
                             <p>designed by | Author</p>
                         </figcaption>
                     </figure>
                 </div>
             </div>
             <div class="col-4 col-t-6 col-p-12">
-                <div class="work">
+                <div class="work brand">
                     <figure>
                         <img src="img/work1.webp" alt="wrk 1" width="370" height="370" loading="lazy">
                         <figcaption>
-                            <h3>heading</h3>
+                            <h3>Heading 5</h3>
                             <p>designed by | Author</p>
                         </figcaption>
                     </figure>
                 </div>
             </div>
             <div class="col-4 col-t-6 col-p-12">
-                <div class="work">
+                <div class="work brand">
                     <figure>
                         <img src="img/work1.webp" alt="wrk 1" width="370" height="370" loading="lazy">
                         <figcaption>
-                            <h3>heading</h3>
+                            <h3>Heading 6</h3>
                             <p>designed by | Author</p>
                         </figcaption>
                     </figure>
@@ -419,7 +424,67 @@
 <footer class="wrap-13">
     <div class="container">
         <p>IDDO</p>
+        <button class="top"><span class="fa fa-chevron-up"></span></button>
     </div>
 </footer>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script>
+$(function(){
+    $(".menu").click(function(){
+        $(this).toggleClass("active");
+        $(".collapse").slideToggle();
+    });  
+
+    if(screen.width<768){
+        $(".collapse nav a").click(function(){
+            $(".menu").removeClass("active");
+            $(".collapse").slideUp(0);
+        })
+    }
+
+
+    $(".video a, .video button").click(function(e){
+        $(".video video").css({opacity:1});
+        $(".video .flex").css({display:"none"});
+    });
+
+    $("#work .btn").click(function(){
+        $("#work .btn").removeClass("active");
+        $(this).addClass("active");
+
+        if( $(this).text()=="All" ){
+            $(".work").fadeIn();
+        }
+        else if( $(this).text()=="Website" ){
+            $(".work").fadeOut(0);
+            $(".web").fadeIn();
+        }
+        else if( $(this).text()=="Branding" ){
+            $(".work").fadeOut(0);
+            $(".brand").fadeIn();
+        }
+    });
+
+
+    $(".accordion a").click(function(e){
+        e.preventDefault();
+        if($(this).hasClass("active")){
+            $(this).removeClass("active");   
+            $(this).next("p").slideUp()
+        }
+        else{
+            $(".accordion a").removeClass();
+            $(".accordion p").slideUp();
+            $(this).addClass("active");
+            $(this).next("p").slideDown();
+        }
+    });
+
+    $(".top").click(function(){
+        $(window).scrollTop(0)
+    })
+
+});
+</script>
 </body>
 </html>
