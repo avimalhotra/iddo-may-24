@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IDDO</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bxslider@4.2.17/dist/jquery.bxslider.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body id="home">
 <header>
@@ -27,7 +29,7 @@
                                 <li><a href="#contact">Contact</a></li>
                             </ul>
                         </nav>
-                        <button class="btn">Sign up</button>
+                        <button class="btn signup">Sign up</button>
                     </div>
                 </div>
             </div>
@@ -37,7 +39,7 @@
 <div class="banner" role="banner">
     <div class="container">
         <div class="video">
-            <video src="" controls width="1170" height="658"></video>
+            <video src="s" controls width="1170" height="658"></video>
             <div class="video-text">
                 <div class="flex align-center">
                     <div><button><span class="fa fa-play-circle-o"></span></button></div>
@@ -54,7 +56,7 @@
     <div class="container">
         <div class="row">
             <div class="col-4 col-t-6 col-p-12">
-                <h2>OUR SERVICES.</h2>
+                <h2 data-aos="fade-up">OUR SERVICES.</h2>
             </div>
             <div class="col-8 col-t-12">
                 <div class="grid">
@@ -115,7 +117,7 @@
     <div class="container">
         <div class="row">
             <div class="col-4 col-t-6 col-p-12">
-                <h2>OUR WORKS.</h2>
+                <h2 data-aos="fade-down">OUR WORKS.</h2>
                 <button class="btn active">All</button><button class="btn">Website</button><button class="btn">Branding</button>
             </div>
         </div>  
@@ -196,7 +198,7 @@
             <div class="col-2"></div>
             <div class="col-8 col-t-12">
                 <div class="reviews">
-                    <div class="review active">
+                    <div class="review">
                         <blockquote>
                             <q>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro iure voluptate reiciendis laborum aliquam officia labore eum.</q>
                             <footer>
@@ -206,24 +208,28 @@
                         </blockquote>
                     </div>
                     <div class="review">
+                        <blockquote>
                         <q>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro iure voluptate reiciendis laborum aliquam officia labore eum. </q>
                             <footer>
                                 <img src="img/jack.webp" alt="jack efron" width="70" height="70" loading="lazy">
                                 <b>JACK EFRON</b>
                             </footer>
+                        </blockquote>    
                     </div>
                     <div class="review">
+                        <blockquote>
                         <q>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro iure voluptate reiciendis laborum aliquam officia labore eum.</q>
                             <footer>
                                 <img src="img/jack.webp" alt="jack efron" width="70" height="70" loading="lazy">
                                 <b>JACK EFRON</b>
                             </footer>
+                        </blockquote>    
                     </div>
-                    <ol class="pager flex">
+                    <!-- <ol class="pager flex">
                         <li><a class="active" href=""></a></li>
                         <li><a href=""></a></li>
                         <li><a href=""></a></li>
-                    </ol>
+                    </ol> -->
                 </div>
             </div>
         </div>
@@ -237,6 +243,57 @@
             </div>
         </div>
         <div class="row">
+            <div class="col-4 col-m-12">
+                <div class="team">
+                    <img src="img/michael.webp" alt="michael" width="170" height="170" loading="lazy">
+                    <div class="social">
+                        <ul class="flex">
+                            <li><a href=""><span class="fa fa-twitter"></span></a></li>
+                            <li><a href=""><span class="fa fa-facebook"></span></a></li>
+                            <li><a href=""><span class="fa fa-instagram"></span></a></li>
+                        </ul>
+                    </div>
+                    <div class="gap">
+                        <h3>MICHAEL JOE</h3>
+                        <small>CEO &amp; FOUNDER</small>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate officia quidem quo nam debitis recusandae ducimus. Harum eaque laboriosam fugiat libero, consequatur distinctio nesciunt voluptas dolorem, minima incidunt, dignissimos quasi?</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4 col-m-12">
+                <div class="team">
+                    <img src="img/michael.webp" alt="michael" width="170" height="170" loading="lazy">
+                    <div class="social">
+                        <ul class="flex">
+                            <li><a href=""><span class="fa fa-twitter"></span></a></li>
+                            <li><a href=""><span class="fa fa-facebook"></span></a></li>
+                            <li><a href=""><span class="fa fa-instagram"></span></a></li>
+                        </ul>
+                    </div>
+                    <div class="gap">
+                        <h3>MICHAEL JOE</h3>
+                        <small>CEO &amp; FOUNDER</small>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate officia quidem quo nam debitis recusandae ducimus. Harum eaque laboriosam fugiat libero, consequatur distinctio nesciunt voluptas dolorem, minima incidunt, dignissimos quasi?</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4 col-m-12">
+                <div class="team">
+                    <img src="img/michael.webp" alt="michael" width="170" height="170" loading="lazy">
+                    <div class="social">
+                        <ul class="flex">
+                            <li><a href=""><span class="fa fa-twitter"></span></a></li>
+                            <li><a href=""><span class="fa fa-facebook"></span></a></li>
+                            <li><a href=""><span class="fa fa-instagram"></span></a></li>
+                        </ul>
+                    </div>
+                    <div class="gap">
+                        <h3>MICHAEL JOE</h3>
+                        <small>CEO &amp; FOUNDER</small>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate officia quidem quo nam debitis recusandae ducimus. Harum eaque laboriosam fugiat libero, consequatur distinctio nesciunt voluptas dolorem, minima incidunt, dignissimos quasi?</p>
+                    </div>
+                </div>
+            </div>
             <div class="col-4 col-m-12">
                 <div class="team">
                     <img src="img/michael.webp" alt="michael" width="170" height="170" loading="lazy">
@@ -427,12 +484,26 @@
         <button class="top"><span class="fa fa-chevron-up"></span></button>
     </div>
 </footer>
+<div class="popupform">
+    <button class="cross"><span class="fa fa-times"></span></button>
+    <form>
+        <div class="mb"><label>Name: <input type="text" required></label></div>
+        <div class="mb"><label>Email: <input type="email" required></label></div>
+        <div class="mb"><label>Phone: <input type="tel" required></label></div>
+        <div class="mb"><button class="btn">Sign Up</button></div>
+    </form>
+</div>
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bxslider@4.2.17/dist/jquery.bxslider.min.js"></script>
 <script>
+    AOS.init();
+    
 $(function(){
     $(".menu").click(function(){
         $(this).toggleClass("active");
         $(".collapse").slideToggle();
+        
     });  
 
     if(screen.width<768){
@@ -483,6 +554,36 @@ $(function(){
     $(".top").click(function(){
         $(window).scrollTop(0)
     })
+
+    $(".wrap-7 .seemore").click(function(){
+        $(this).children("span").toggleClass("fa-minus-circle")
+        $(".wrap-7 .col-4:nth-child(4),.wrap-7 .col-4:nth-child(5),.wrap-7 .col-4:nth-child(6)").slideToggle();
+    });
+
+    $(".signup").click(function(){
+        $("body").append(`<div class="overlay"></div>`);
+        $("body").append(`<div class="popup"></div>`);
+        $(".popup").append($(".popupform").html());
+
+        $(".overlay, .cross").click(function(){
+            $(".overlay").remove();
+            $(".popup").remove();
+        });
+        $(window).keyup(function(e){
+            if(e.which==27){ 
+                $(".overlay").remove();
+                $(".popup").remove();
+            }
+        })
+    });
+
+    $(".reviews").bxSlider({
+        auto:true,
+        pause:5000,
+        controls:false
+    });
+
+
 
 });
 </script>
